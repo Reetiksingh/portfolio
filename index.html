@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reetik Singh – Backend-Focused Full-Stack Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Reetik Singh</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#engineering" class="nav-link">Engineering</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-photo">
+                <img src="2.jpeg" alt="Reetik Singh" class="profile-pic">
+            </div>
+            <div class="hero-content">
+                <h1>Backend-Focused Full-Stack Engineer</h1>
+                <p class="tagline">I design backend systems and full-stack applications with a focus on scalability,
+                    architecture, and real-world constraints.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO SECTION -->
+    <section id="what-i-do" class="what-i-do">
+        <div class="container">
+            <h2>What I Actually Do</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Backend Systems & APIs</h3>
+                    <p>Design and build scalable backend systems, APIs, and services. Focus on architecture, data
+                        modeling, and performance.</p>
+                </div>
+                <div class="card">
+                    <h3>System-Driven Full-Stack</h3>
+                    <p>Full-stack applications where the backend drives the value. Frontend as a visualization layer,
+                        not the core.</p>
+                </div>
+                <div class="card">
+                    <h3>Engineering & Problem Solving</h3>
+                    <p>Write clean, maintainable code. Think through trade-offs. Build with real constraints in mind.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+
+            <!-- Flagship Project -->
+            <div class="project-flagship">
+                <div class="project-header">
+                    <span class="badge">Flagship Project</span>
+                </div>
+                <h3>3D City Simulator</h3>
+                <p class="project-tagline">A system-driven city simulation with state management, rules, scoring, and
+                    extensibility.</p>
+                <div class="project-details">
+                    <div class="tech-stack">
+                        <span class="tag">System Architecture</span>
+                        <span class="tag">State Management</span>
+                        <span class="tag">Simulation Engine</span>
+                        <span class="tag">Three.js</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    A complex simulation system that manages city state, applies rules, calculates scoring, and renders
+                    in 3D. Built to explore architecture, state propagation, and system scalability from first
+                    principles.
+                </p>
+                <a href="deep-dive.html" class="btn-link">Deep Dive →</a>
+            </div>
+
+            <!-- Other Projects -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>Android 2048 Game</h4>
+                    <p>State management and clean architecture in Jetpack Compose. Focus on game logic separation and
+                        performance.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">Jetpack Compose</span>
+                        <span class="tag">State Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ENGINEERING NOTES -->
+    <section id="engineering" class="engineering-notes">
+        <div class="container">
+            <h2>Engineering Notes</h2>
+            <p class="section-intro">Honest technical reflections from projects and learning.</p>
+
+            <div class="notes-grid">
+                <article class="note">
+                    <h3>How I Think About System Design as a Student</h3>
+                    <p>
+                        System design isn't just for backend interviews. Every project has architecture. The difference
+                        between code that scales and code that breaks is how well you think about layers, separation of
+                        concerns, and trade-offs. I approach every project asking: "What would happen if this had 10x
+                        more users?"
+                    </p>
+                </article>
+
+                <article class="note">
+                    <h3>What Building a City Simulator Taught Me About Backend Systems</h3>
+                    <p>
+                        A simulator is really just a backend system with a frontend visualization. The core lesson: data
+                        flows in, rules process it, state updates, clients consume the result. Understanding this makes
+                        me better at building real services.
+                    </p>
+                </article>
+
+                <article class="note">
+                    <h3>Why I Care About Clean Architecture More Than Frameworks</h3>
+                    <p>
+                        Frameworks are tools. They change every 3 years. Architecture is timeless. If I can write clean
+                        code in vanilla JavaScript, I can write clean code anywhere. I focus on principles first,
+                        frameworks second.
+                    </p>
+                </article>
+
+                <article class="note">
+                    <h3>Common Backend Mistakes I've Made and Fixed</h3>
+                    <p>
+                        <strong>Mixing concerns:</strong> I used to write business logic inside request handlers. Now
+                        it's always separated. Tests are easier. Bugs are easier to isolate.<br><br>
+                        <strong>Premature optimization:</strong> I optimized code that didn't matter. Profile first,
+                        optimize after. Measure before and after.<br><br>
+                        <strong>No versioning plan:</strong> APIs change. Build versioning from day one.
+                    </p>
+                </article>
+
+                <article class="note">
+                    <h3>On Debugging Intuition</h3>
+                    <p>
+                        Good debugging is about reducing the search space. Break the problem in half. Check invariants.
+                        Use immutability to make state transitions explicit. The faster you can reproduce a bug, the
+                        faster you fix it.
+                    </p>
+                </article>
+
+                <article class="note">
+                    <h3>Learning Through Building vs. Learning Through Tutorials</h3>
+                    <p>
+                        Tutorials teach you syntax. Building teaches you systems. I choose projects that force me to
+                        think about architecture, not just code. That's where growth happens.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+
+            <div class="skills-category">
+                <h3>Backend & Systems</h3>
+                <ul class="skills-list">
+                    <li>API design and RESTful principles</li>
+                    <li>State management and data structures</li>
+                    <li>System decomposition and architecture</li>
+                    <li>Database design and SQL</li>
+                    <li>Performance thinking and optimization</li>
+                </ul>
+            </div>
+
+            <div class="skills-category">
+                <h3>Full-Stack (Supporting)</h3>
+                <ul class="skills-list">
+                    <li>Frontend frameworks and libraries</li>
+                    <li>UI as a visualization layer</li>
+                    <li>Responsive design and accessibility</li>
+                    <li>Frontend performance</li>
+                </ul>
+            </div>
+
+            <div class="skills-category">
+                <h3>Engineering Practices</h3>
+                <ul class="skills-list">
+                    <li>Version control and Git workflows</li>
+                    <li>Debugging and problem solving</li>
+                    <li>Trade-off analysis</li>
+                    <li>Code review and collaboration</li>
+                    <li>Learning through building</li>
+                </ul>
+            </div>
+
+            <div class="skills-category">
+                <h3>Technologies</h3>
+                <ul class="skills-list">
+                    <li><strong>Languages:</strong> JavaScript, TypeScript, Kotlin, Python, Java</li>
+                    <li><strong>Frontend:</strong> React, Three.js, HTML/CSS, Jetpack Compose</li>
+                    <li><strong>Backend:</strong> Node.js, Express, databases, API design</li>
+                    <li><strong>Tools:</strong> Git, VS Code, debugging tools, performance profiling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>
+                    I'm a computer engineering student focused on building depth, not chasing trends. I'm interested in
+                    backend systems, architecture, and the kind of engineering that scales.
+                </p>
+                <p>
+                    I don't learn by following tutorials—I learn by building. That's why every project I take on forces
+                    me to think differently: about state, about scalability, about trade-offs.
+                </p>
+                <p>
+                    I'm actively working toward strong backend engineering roles. I want to solve hard problems, ship
+                    real systems, and work with engineers who care about how things actually work.
+                </p>
+                <p>
+                    When I'm not coding, I'm thinking about system design, reading about distributed systems, or playing
+                    with new ways to solve old problems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    <span>Email</span>
+                    <span>your.email@example.com</span>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+                    <span>GitHub</span>
+                    <span>github.com/yourusername</span>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
+                    <span>LinkedIn</span>
+                    <span>linkedin.com/in/yourusername</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Reetik Singh. Backend-focused full-stack engineer.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
