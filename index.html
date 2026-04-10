@@ -1,184 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reetik Singh | Backend Engineer</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reetik Singh — Backend Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-    <div class="nav-container">
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
 
-        <h2 class="logo">Reetik Singh</h2>
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
 
-        <ul class="nav-menu">
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+  <!-- ───── NAVBAR ───── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <span class="logo" id="nav-logo">RS</span>
+
+      <ul class="nav-menu">
+        <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+        <li><a href="#skills"   class="nav-link" data-text="Skills">Skills</a></li>
+        <li><a href="#about"    class="nav-link" data-text="About">About</a></li>
+        <li><a href="#contact"  class="nav-link" data-text="Contact">Contact</a></li>
+      </ul>
+
+      <a href="resume.pdf" download class="nav-resume-btn">
+        <span>Resume</span>
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ───── HERO ───── -->
+  <section class="hero" id="hero">
+
+    <!-- floating tags -->
+    <div class="float-tag" style="top:18%;left:6%;">Node.js</div>
+    <div class="float-tag" style="top:72%;left:4%;">Docker</div>
+    <div class="float-tag" style="top:28%;right:5%;">AWS</div>
+    <div class="float-tag" style="top:65%;right:7%;">REST API</div>
+
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-greeting">
+          <span class="greeting-dot"></span>
+          <span id="typing-text"></span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="line">Reetik</span>
+          <span class="line accent-stroke">Singh</span>
+        </h1>
+
+        <div class="hero-role-wrap">
+          <div class="role-badge">Available for roles</div>
+          <p class="hero-role">Backend-Focused Full Stack Engineer</p>
+        </div>
+
+        <p class="hero-desc">
+          I architect scalable backend systems, design clean REST APIs, and ship real-world applications. 500+ DSA problems solved. Based in Pune.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">500<span class="stat-plus">+</span></span>
+            <span class="stat-label">DSA Problems</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">10<span class="stat-plus">+</span></span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <span>View My Work</span>
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="img-frame">
+          <div class="img-glow"></div>
+          <img src="2.jpeg" alt="Reetik Singh" class="profile-img" />
+          <div class="img-badge">
+            <svg viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="3"/></svg>
+            Open to work
+          </div>
+        </div>
+      </div>
 
     </div>
-</nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-container">
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
 
-        <div class="hero-text">
+  </section>
 
-            <h2 id="typing-text" class="typing"></h2>
+  <!-- ───── PROJECTS ───── -->
+  <section id="projects" class="section reveal">
+    <div class="section-inner">
 
-            <h1 class="name">Reetik Singh</h1>
+      <div class="section-header">
+        <span class="section-tag">02 — Work</span>
+        <h2 class="section-title">Selected Projects</h2>
+      </div>
 
-            <h3 class="role">Backend-Focused Full Stack Engineer</h3>
-
-            <p>
-                I build scalable backend systems, APIs, and real-world applications with strong focus on architecture and performance.
+      <!-- FLAGSHIP -->
+      <div class="flagship-card reveal-child">
+        <div class="flagship-meta">
+          <span class="project-type">Flagship Project</span>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="flagship-body">
+          <div class="flagship-left">
+            <h3 class="project-title">Nutrition Barcode Scanner</h3>
+            <p class="project-desc">
+              A backend-driven application that scans barcodes and QR codes to fetch real-time nutritional data. Features role-based access control with admin and user levels, RESTful APIs, and JWT-secured endpoints built on an SQL database.
             </p>
-
-            <div class="cta">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="resume.pdf" download class="btn glass">Download Resume</a>
+            <div class="project-tags">
+              <span>Node.js</span><span>Express.js</span><span>SQL</span><span>JWT</span><span>REST API</span>
             </div>
+            <div class="project-links">
+              <a href="https://github.com/Reetiksingh/Diet-Scanner" target="_blank" class="link-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+              <a href="#" target="_blank" class="link-btn primary">Live Demo ↗</a>
+            </div>
+          </div>
+          <div class="flagship-right">
+            <div class="code-preview">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <pre><code><span class="c-comment">// Role-based access middleware</span>
+<span class="c-keyword">const</span> <span class="c-fn">authorize</span> = (role) => {
+  <span class="c-keyword">return</span> (req, res, next) => {
+    <span class="c-keyword">if</span> (req.user.role !== role)
+      <span class="c-keyword">return</span> res.<span class="c-fn">status</span>(<span class="c-num">403</span>)
+        .<span class="c-fn">json</span>({ error: <span class="c-str">'Access denied'</span> });
+    <span class="c-fn">next</span>();
+  };
+};
 
+<span class="c-comment">// Barcode lookup route</span>
+router.<span class="c-fn">get</span>(<span class="c-str">'/nutrition/:code'</span>,
+  <span class="c-fn">authenticate</span>,
+  <span class="c-fn">authorize</span>(<span class="c-str">'user'</span>),
+  NutritionController.<span class="c-fn">scan</span>
+);</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMALLER PROJECTS -->
+      <div class="projects-grid">
+
+        <div class="proj-card reveal-child">
+          <div class="proj-card-top">
+            <span class="proj-icon">🍽️</span>
+            <span class="proj-year">2024</span>
+          </div>
+          <h4 class="proj-title">Meal Planner</h4>
+          <p class="proj-desc">Calorie-based meal planning system with dynamic personalized recommendations based on dietary preferences.</p>
+          <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <a href="https://github.com/Reetiksingh/meal-planner" target="_blank" class="proj-link">View Project →</a>
         </div>
 
-        <div class="hero-image">
-            <img src="2.jpeg" class="profile glow">
+        <div class="proj-card reveal-child">
+          <div class="proj-card-top">
+            <span class="proj-icon">🏙️</span>
+            <span class="proj-year">2023</span>
+          </div>
+          <h4 class="proj-title">3D City Simulator</h4>
+          <p class="proj-desc">System design and simulation engine for modeling a 3D city environment with interactive components.</p>
+          <div class="proj-tags"><span>P5.js</span><span>JavaScript</span></div>
+          <a href="https://github.com/Reetiksingh/3D-City-Simulator" target="_blank" class="proj-link">View Project →</a>
         </div>
 
+        <div class="proj-card reveal-child">
+          <div class="proj-card-top">
+            <span class="proj-icon">⚡</span>
+            <span class="proj-year">2023</span>
+          </div>
+          <h4 class="proj-title">Responsive Sidebar UI</h4>
+          <p class="proj-desc">Pure-CSS responsive sidebar with smooth transitions and zero JavaScript — clean, accessible navigation.</p>
+          <div class="proj-tags"><span>HTML</span><span>CSS</span></div>
+          <a href="https://github.com/Reetiksingh/adoptme" target="_blank" class="proj-link">View Project →</a>
+        </div>
+
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
+  <!-- ───── SKILLS ───── -->
+  <section id="skills" class="section reveal">
+    <div class="section-inner">
 
-    <div class="project flagship">
-        <h3>Nutrition Barcode Scanner</h3>
-        <p>Backend system with authentication, REST APIs, and SQL database.</p>
+      <div class="section-header">
+        <span class="section-tag">03 — Stack</span>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
 
-        <div class="tags">
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>SQL</span>
-            <span>JWT</span>
-        </div>
+      <div class="skills-layout">
 
-        <div class="links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Live Demo</a>
-        </div>
-    </div>
-
-    <div class="grid">
-        <div class="card">
-            <h4>3D City Simulator</h4>
-            <p>System design & simulation engine.</p>
-            <a href="https://github.com/yourusername" target="_blank">View →</a>
-        </div>
-
-        <div class="card">
-            <h4>Meal Planner</h4>
-            <p>Dynamic recommendation system.</p>
-            <a href="https://github.com/yourusername" target="_blank">View →</a>
-        </div>
-
-        <div class="card">
-            <h4>Sidebar UI</h4>
-            <p>Responsive UI component.</p>
-            <a href="https://github.com/yourusername" target="_blank">View →</a>
-        </div>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-    <h2>Skills</h2>
-
-    <div class="grid">
-
-        <div class="skill">
+        <div class="skill-group reveal-child">
+          <div class="skill-group-label">
+            <span class="skill-num">01</span>
             <strong>Backend</strong>
-            <ul>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>JWT Authentication</li>
-                <li>REST API Design</li>
-            </ul>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">Node.js</span>
+            <span class="pill">Express.js</span>
+            <span class="pill">JWT Auth</span>
+            <span class="pill">REST API Design</span>
+            <span class="pill">Nodemon</span>
+          </div>
         </div>
 
-        <div class="skill">
+        <div class="skill-group reveal-child">
+          <div class="skill-group-label">
+            <span class="skill-num">02</span>
+            <strong>Languages</strong>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">JavaScript</span>
+            <span class="pill">Java</span>
+            <span class="pill">C++</span>
+            <span class="pill">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal-child">
+          <div class="skill-group-label">
+            <span class="skill-num">03</span>
             <strong>Frontend</strong>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React.js</li>
-            </ul>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">React.js</span>
+            <span class="pill">Angular.js</span>
+            <span class="pill">HTML5</span>
+            <span class="pill">CSS3</span>
+            <span class="pill">Tailwind CSS</span>
+            <span class="pill">Bootstrap</span>
+            <span class="pill">P5.js</span>
+          </div>
         </div>
 
-        <div class="skill">
+        <div class="skill-group reveal-child">
+          <div class="skill-group-label">
+            <span class="skill-num">04</span>
             <strong>Database</strong>
-            <ul>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>Data Modeling</li>
-            </ul>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">MySQL</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">Data Modeling</span>
+          </div>
         </div>
 
-        <div class="skill">
-            <strong>Tools & Cloud</strong>
-            <ul>
-                <li>Git & GitHub</li>
-                <li>AWS</li>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-            </ul>
+        <div class="skill-group reveal-child">
+          <div class="skill-group-label">
+            <span class="skill-num">05</span>
+            <strong>Cloud & DevOps</strong>
+          </div>
+          <div class="skill-pills">
+            <span class="pill highlight">AWS</span>
+            <span class="pill highlight">Docker</span>
+            <span class="pill highlight">Kubernetes</span>
+            <span class="pill">Git & GitHub</span>
+            <span class="pill">Notion</span>
+          </div>
         </div>
 
+      </div>
+
+      <!-- DSA highlight bar -->
+      <div class="dsa-bar reveal-child">
+        <div class="dsa-icon">⚔️</div>
+        <div class="dsa-text">
+          <strong>500+ DSA Problems Solved</strong>
+          <span>LeetCode · Problem solving · Algorithms & Data Structures</span>
+        </div>
+        <a href="https://leetcode.com/u/Reetik_Singh/" target="_blank" class="dsa-link">View LeetCode →</a>
+      </div>
+
     </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-    <h2>About</h2>
-    <p>
-        I am a Computer Engineering student at G.H. Raisoni College of Engineering and Management, Pune,
-        focused on building strong backend systems and scalable applications. I specialize in designing
-        RESTful APIs, handling authentication, and working with databases like MySQL and MongoDB.
-    
-        I have built real-world projects such as a Nutrition Barcode Scanner using Node.js, Express, and SQL,
-        where I implemented role-based access control and efficient backend logic. I enjoy solving complex
-        problems and have strengthened my skills by solving 500+ DSA problems on platforms like LeetCode.
-    </p>
-    <p>
-        Along with technical skills, I bring strong communication, teamwork, and problem-solving abilities.
-        I am actively preparing for backend and full-stack engineering roles where I can contribute to
-        building scalable systems and impactful products.
-    </p>
-</section>
+  <!-- ───── ABOUT ───── -->
+  <section id="about" class="section reveal">
+    <div class="section-inner">
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
+      <div class="section-header">
+        <span class="section-tag">04 — Me</span>
+        <h2 class="section-title">About Reetik</h2>
+      </div>
 
-    <div class="contact-links">
-        <a href="mailto:reetiksingh8767@gmail.com" class="contact-item">Email</a>
-        <a href="https://github.com/yourusername" target="_blank" class="contact-item">GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-item">LinkedIn</a>
+      <div class="about-layout">
+        <div class="about-left reveal-child">
+          <p class="about-lead">
+            Computer Engineering student at <strong>G.H. Raisoni College of Engineering and Management, Pune</strong> — graduating May 2027.
+          </p>
+          <p class="about-body">
+            I specialise in designing RESTful APIs, building authentication systems, and working with both SQL and NoSQL databases. My flagship project — a Nutrition Barcode Scanner — uses Node.js, Express, and SQL with role-based access control and efficient backend logic.
+          </p>
+          <p class="about-body">
+            Beyond code, I'm a competitive athlete — Gold medals in 100m and 200m at inter-college athletics competitions, Silver in relay, and represented at Jilla Parishad level in volleyball.
+          </p>
+
+          <div class="cert-block">
+            <div class="cert-icon">🏆</div>
+            <div>
+              <strong>Full Stack Development &amp; AI/ML</strong>
+              <span>Certified by Apna College</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal-child">
+          <div class="soft-skills-title">Soft Skills</div>
+          <div class="soft-skills">
+            <span>Effective Communication</span>
+            <span>Team Work</span>
+            <span>Public Speaking</span>
+            <span>People Management</span>
+            <span>Data Storytelling</span>
+            <span>Project Planning</span>
+            <span>Report Building</span>
+            <span>Presentation Strategy</span>
+          </div>
+
+          <div class="edu-timeline">
+            <div class="edu-item">
+              <span class="edu-year">2027</span>
+              <div class="edu-info">
+                <strong>B.Tech — Computer Engineering</strong>
+                <span>G.H. Raisoni College, Pune</span>
+              </div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-year">2023</span>
+              <div class="edu-info">
+                <strong>HSC</strong>
+                <span>SNBP School and Junior College, Pune</span>
+              </div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-year">2021</span>
+              <div class="edu-info">
+                <strong>SSC</strong>
+                <span>Rodgers English School, Pune</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-</section>
+  </section>
 
-<script src="script.js"></script>
+  <!-- ───── CONTACT ───── -->
+  <section id="contact" class="section reveal">
+    <div class="section-inner">
 
+      <div class="section-header">
+        <span class="section-tag">05 — Connect</span>
+        <h2 class="section-title">Let's Build Together</h2>
+      </div>
+
+      <div class="contact-layout">
+        <p class="contact-lead reveal-child">
+          Open to backend, full-stack, and internship opportunities. If you're building something great — let's talk.
+        </p>
+
+        <div class="contact-links reveal-child">
+          <a href="mailto:reetiksingh8767@gmail.com" class="contact-card">
+            <span class="cc-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <span>reetiksingh8767@gmail.com</span>
+            </div>
+            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/reetik-singh-7b0200288/" target="_blank" class="contact-card">
+            <span class="cc-icon">💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <span>Reetik Singh</span>
+            </div>
+            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <a href="https://github.com/Reetiksingh" target="_blank" class="contact-card">
+            <span class="cc-icon">🐙</span>
+            <div>
+              <strong>GitHub</strong>
+              <span>Reetik Singh</span>
+            </div>
+            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <a href="https://leetcode.com/u/Reetik_Singh/" target="_blank" class="contact-card">
+            <span class="cc-icon">⚔️</span>
+            <div>
+              <strong>LeetCode</strong>
+              <span>500+ problems solved</span>
+            </div>
+            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="contact-phone reveal-child">
+          <span>📞</span> (+91) 8767573253
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Reetik Singh © 2025</span>
+      <span>Built with precision · Pune, India 🇮🇳</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
