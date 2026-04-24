@@ -3,445 +3,646 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reetik Singh — Backend Engineer</title>
+  <meta
+    name="description"
+    content="Reetik Singh is a backend-focused full stack developer building scalable Node.js systems, REST APIs, and polished web applications."
+  />
+  <title>Reetik Singh | Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="page-noise" aria-hidden="true"></div>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursor-follower"></div>
-
-  <!-- NOISE OVERLAY -->
-  <div class="noise"></div>
-
-  <!-- ───── NAVBAR ───── -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <span class="logo" id="nav-logo">RS</span>
-
-      <ul class="nav-menu">
-        <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
-        <li><a href="#skills"   class="nav-link" data-text="Skills">Skills</a></li>
-        <li><a href="#about"    class="nav-link" data-text="About">About</a></li>
-        <li><a href="#contact"  class="nav-link" data-text="Contact">Contact</a></li>
-      </ul>
-
-      <a href="resume.pdf" download class="nav-resume-btn">
-        <span>Resume</span>
-        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <header class="navbar" id="navbar">
+    <div class="nav-shell">
+      <a href="#hero" class="brand" aria-label="Go to top">
+        <span class="brand-mark">RS</span>
+        <span class="brand-copy">
+          <strong>Reetik Singh</strong>
+          <span>Full Stack Developer</span>
+        </span>
       </a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#engineering" class="nav-link">Engineering</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="Resume.pdf" download class="nav-resume">Resume</a>
+      </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- ───── HERO ───── -->
-  <section class="hero" id="hero">
-
-    <!-- floating tags -->
-    <div class="float-tag" style="top:18%;left:6%;">Node.js</div>
-    <div class="float-tag" style="top:72%;left:4%;">Docker</div>
-    <div class="float-tag" style="top:28%;right:5%;">AWS</div>
-    <div class="float-tag" style="top:65%;right:7%;">REST API</div>
-
-    <div class="hero-inner">
-
-      <div class="hero-text">
-        <div class="hero-greeting">
-          <span class="greeting-dot"></span>
-          <span id="typing-text"></span>
-        </div>
-
-        <h1 class="hero-name">
+  <main>
+    <section class="hero" id="hero">
+      <div class="section-shell hero-layout">
+        <div class="hero-copy hero-animate" style="--hero-delay: 120ms;">
+          <p class="eyebrow">Full Stack Developer / Node.js / MongoDB / Redis</p>
+          <h1 class="hero-name">
           <span class="line">Reetik</span>
           <span class="line accent-stroke">Singh</span>
         </h1>
+          <p class="hero-tagline">Building scalable systems, APIs, and performant web apps.</p>
+          <p class="hero-summary">
+            Backend-focused full stack developer creating reliable Node.js services, structured REST
+            APIs, and clean product experiences. I care about authentication, data flow, and
+            architecture that stays maintainable as products grow.
+          </p>
 
-        <div class="hero-role-wrap">
-          <div class="role-badge">Available for roles</div>
-          <p class="hero-role">Backend-Focused Full Stack Engineer</p>
-        </div>
-
-        <p class="hero-desc">
-          I architect scalable backend systems, design clean REST APIs, and ship real-world applications. 500+ DSA problems solved. Based in Pune.
-        </p>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">500<span class="stat-plus">+</span></span>
-            <span class="stat-label">DSA Problems</span>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a
+              href="https://github.com/Reetiksingh"
+              target="_blank"
+              rel="noreferrer"
+              class="btn btn-secondary"
+            >
+              GitHub
+            </a>
+            <a href="#contact" class="btn btn-secondary">Contact</a>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">4</span>
-            <span class="stat-label">Projects Built</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">10<span class="stat-plus">+</span></span>
-            <span class="stat-label">Technologies</span>
-          </div>
-        </div>
 
-        <div class="hero-cta">
-          <a href="#projects" class="btn-primary">
-            <span>View My Work</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#contact" class="btn-ghost">Get in Touch</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="img-frame">
-          <div class="img-glow"></div>
-          <img src="2.jpeg" alt="Reetik Singh" class="profile-img" />
-          <div class="img-badge">
-            <svg viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="3"/></svg>
-            Open to work
+          <div class="hero-proof-grid hero-animate" style="--hero-delay: 360ms;">
+            <article class="proof-card">
+              <span class="proof-label">Primary focus</span>
+              <strong>Node.js APIs, auth flows, and maintainable backend structure</strong>
+            </article>
+            <article class="proof-card">
+              <span class="proof-label">Developer signal</span>
+              <strong>500+ DSA problems solved with consistency and discipline</strong>
+            </article>
+            <article class="proof-card">
+              <span class="proof-label">What I ship</span>
+              <strong>Product workflows backed by APIs, queues, caching, and clean UI delivery</strong>
+            </article>
           </div>
         </div>
-      </div>
 
-    </div>
+        <div class="hero-panel hero-animate" style="--hero-delay: 240ms;">
+          <article class="card profile-panel">
+            <div class="profile-top">
+              <img src="2.jpeg" alt="Portrait of Reetik Singh" class="profile-image" />
+              <div>
+                <p class="profile-name">Backend Snapshot</p>
+                <p class="profile-role">Node.js / APIs / System Design Thinking</p>
+              </div>
+            </div>
 
-    <div class="scroll-hint">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-
-  </section>
-
-  <!-- ───── PROJECTS ───── -->
-  <section id="projects" class="section reveal">
-    <div class="section-inner">
-
-      <div class="section-header">
-        <span class="section-tag">02 — Work</span>
-        <h2 class="section-title">Selected Projects</h2>
-      </div>
-
-      <!-- FLAGSHIP -->
-      <div class="flagship-card reveal-child">
-        <div class="flagship-meta">
-          <span class="project-type">Flagship Project</span>
-          <span class="project-year">2024</span>
-        </div>
-        <div class="flagship-body">
-          <div class="flagship-left">
-            <h3 class="project-title">Nutrition Barcode Scanner</h3>
-            <p class="project-desc">
-              A backend-driven application that scans barcodes and QR codes to fetch real-time nutritional data. Features role-based access control with admin and user levels, RESTful APIs, and JWT-secured endpoints built on an SQL database.
+            <p class="profile-copy">
+              Building API-driven products with a strong emphasis on scalability, authentication, and
+              structured backend engineering.
             </p>
-            <div class="project-tags">
-              <span>Node.js</span><span>Express.js</span><span>SQL</span><span>JWT</span><span>REST API</span>
+
+            <ul class="signal-list">
+              <li>Building with Node.js, Express, MongoDB, MySQL, Redis, React, Docker, and BullMQ.</li>
+              <li>Strong on REST API design, JWT authentication, caching layers, and async workflows.</li>
+              <li>Learning system design deeply while improving problem solving every week.</li>
+            </ul>
+
+            <div class="availability">
+              <span class="availability-dot"></span>
+              Open to full stack and backend opportunities
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Reetiksingh/Diet-Scanner" target="_blank" class="link-btn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                GitHub
-              </a>
-              <a href="#" target="_blank" class="link-btn primary">Live Demo ↗</a>
-            </div>
-          </div>
-          <div class="flagship-right">
-            <div class="code-preview">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <pre><code><span class="c-comment">// Role-based access middleware</span>
-<span class="c-keyword">const</span> <span class="c-fn">authorize</span> = (role) => {
-  <span class="c-keyword">return</span> (req, res, next) => {
-    <span class="c-keyword">if</span> (req.user.role !== role)
-      <span class="c-keyword">return</span> res.<span class="c-fn">status</span>(<span class="c-num">403</span>)
-        .<span class="c-fn">json</span>({ error: <span class="c-str">'Access denied'</span> });
-    <span class="c-fn">next</span>();
-  };
-};
+          </article>
 
-<span class="c-comment">// Barcode lookup route</span>
-router.<span class="c-fn">get</span>(<span class="c-str">'/nutrition/:code'</span>,
-  <span class="c-fn">authenticate</span>,
-  <span class="c-fn">authorize</span>(<span class="c-str">'user'</span>),
-  NutritionController.<span class="c-fn">scan</span>
-);</code></pre>
-            </div>
+          <div class="metric-grid">
+            <article class="card metric-card">
+              <span class="metric-value">500+</span>
+              <span class="metric-label">DSA problems solved</span>
+            </article>
+            <article class="card metric-card">
+              <span class="metric-value">3</span>
+              <span class="metric-label">Featured case studies</span>
+            </article>
+            <article class="card metric-card">
+              <span class="metric-value">2027</span>
+              <span class="metric-label">B.Tech graduation target</span>
+            </article>
+            <article class="card metric-card">
+              <span class="metric-value metric-value-wide">Pune, India</span>
+              <span class="metric-label">Current base</span>
+            </article>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- SMALLER PROJECTS -->
-      <div class="projects-grid">
-
-        <div class="proj-card reveal-child">
-          <div class="proj-card-top">
-            <span class="proj-icon">🍽️</span>
-            <span class="proj-year">2024</span>
-          </div>
-          <h4 class="proj-title">Meal Planner</h4>
-          <p class="proj-desc">Calorie-based meal planning system with dynamic personalized recommendations based on dietary preferences.</p>
-          <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <a href="https://github.com/Reetiksingh/meal-planner" target="_blank" class="proj-link">View Project →</a>
-        </div>
-
-        <div class="proj-card reveal-child">
-          <div class="proj-card-top">
-            <span class="proj-icon">🏙️</span>
-            <span class="proj-year">2023</span>
-          </div>
-          <h4 class="proj-title">3D City Simulator</h4>
-          <p class="proj-desc">System design and simulation engine for modeling a 3D city environment with interactive components.</p>
-          <div class="proj-tags"><span>P5.js</span><span>JavaScript</span></div>
-          <a href="https://github.com/Reetiksingh/3D-City-Simulator" target="_blank" class="proj-link">View Project →</a>
-        </div>
-
-        <div class="proj-card reveal-child">
-          <div class="proj-card-top">
-            <span class="proj-icon">⚡</span>
-            <span class="proj-year">2023</span>
-          </div>
-          <h4 class="proj-title">Responsive Sidebar UI</h4>
-          <p class="proj-desc">Pure-CSS responsive sidebar with smooth transitions and zero JavaScript — clean, accessible navigation.</p>
-          <div class="proj-tags"><span>HTML</span><span>CSS</span></div>
-          <a href="https://github.com/Reetiksingh/adoptme" target="_blank" class="proj-link">View Project →</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ───── SKILLS ───── -->
-  <section id="skills" class="section reveal">
-    <div class="section-inner">
-
-      <div class="section-header">
-        <span class="section-tag">03 — Stack</span>
-        <h2 class="section-title">Technical Skills</h2>
-      </div>
-
-      <div class="skills-layout">
-
-        <div class="skill-group reveal-child">
-          <div class="skill-group-label">
-            <span class="skill-num">01</span>
-            <strong>Backend</strong>
-          </div>
-          <div class="skill-pills">
-            <span class="pill">Node.js</span>
-            <span class="pill">Express.js</span>
-            <span class="pill">JWT Auth</span>
-            <span class="pill">REST API Design</span>
-            <span class="pill">Nodemon</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal-child">
-          <div class="skill-group-label">
-            <span class="skill-num">02</span>
-            <strong>Languages</strong>
-          </div>
-          <div class="skill-pills">
-            <span class="pill">JavaScript</span>
-            <span class="pill">Java</span>
-            <span class="pill">C++</span>
-            <span class="pill">SQL</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal-child">
-          <div class="skill-group-label">
-            <span class="skill-num">03</span>
-            <strong>Frontend</strong>
-          </div>
-          <div class="skill-pills">
-            <span class="pill">React.js</span>
-            <span class="pill">Angular.js</span>
-            <span class="pill">HTML5</span>
-            <span class="pill">CSS3</span>
-            <span class="pill">Tailwind CSS</span>
-            <span class="pill">Bootstrap</span>
-            <span class="pill">P5.js</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal-child">
-          <div class="skill-group-label">
-            <span class="skill-num">04</span>
-            <strong>Database</strong>
-          </div>
-          <div class="skill-pills">
-            <span class="pill">MySQL</span>
-            <span class="pill">MongoDB</span>
-            <span class="pill">Data Modeling</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal-child">
-          <div class="skill-group-label">
-            <span class="skill-num">05</span>
-            <strong>Cloud & DevOps</strong>
-          </div>
-          <div class="skill-pills">
-            <span class="pill highlight">AWS</span>
-            <span class="pill highlight">Docker</span>
-            <span class="pill highlight">Kubernetes</span>
-            <span class="pill">Git & GitHub</span>
-            <span class="pill">Notion</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- DSA highlight bar -->
-      <div class="dsa-bar reveal-child">
-        <div class="dsa-icon">⚔️</div>
-        <div class="dsa-text">
-          <strong>500+ DSA Problems Solved</strong>
-          <span>LeetCode · Problem solving · Algorithms & Data Structures</span>
-        </div>
-        <a href="https://leetcode.com/u/Reetik_Singh/" target="_blank" class="dsa-link">View LeetCode →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ───── ABOUT ───── -->
-  <section id="about" class="section reveal">
-    <div class="section-inner">
-
-      <div class="section-header">
-        <span class="section-tag">04 — Me</span>
-        <h2 class="section-title">About Reetik</h2>
-      </div>
-
-      <div class="about-layout">
-        <div class="about-left reveal-child">
-          <p class="about-lead">
-            Computer Engineering student at <strong>G.H. Raisoni College of Engineering and Management, Pune</strong> — graduating May 2027.
+    <section class="section" id="about">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">About</p>
+          <h2>Backend-first builder with full stack execution.</h2>
+          <p class="section-intro">
+            I am a Computer Engineering student in Pune who enjoys turning product ideas into
+            API-driven systems with clean frontend delivery. My strongest interest is backend
+            engineering: shaping auth flows, modeling data, structuring REST endpoints, and making
+            sure the codebase stays readable as the product grows.
           </p>
-          <p class="about-body">
-            I specialise in designing RESTful APIs, building authentication systems, and working with both SQL and NoSQL databases. My flagship project — a Nutrition Barcode Scanner — uses Node.js, Express, and SQL with role-based access control and efficient backend logic.
-          </p>
-          <p class="about-body">
-            Beyond code, I'm a competitive athlete — Gold medals in 100m and 200m at inter-college athletics competitions, Silver in relay, and represented at Jilla Parishad level in volleyball.
-          </p>
-
-          <div class="cert-block">
-            <div class="cert-icon">🏆</div>
-            <div>
-              <strong>Full Stack Development &amp; AI/ML</strong>
-              <span>Certified by Apna College</span>
-            </div>
-          </div>
         </div>
 
-        <div class="about-right reveal-child">
-          <div class="soft-skills-title">Soft Skills</div>
-          <div class="soft-skills">
-            <span>Effective Communication</span>
-            <span>Team Work</span>
-            <span>Public Speaking</span>
-            <span>People Management</span>
-            <span>Data Storytelling</span>
-            <span>Project Planning</span>
-            <span>Report Building</span>
-            <span>Presentation Strategy</span>
-          </div>
+        <div class="about-grid">
+          <article class="card reveal">
+            <h3>What I bring</h3>
+            <p>
+              I like building the part of the product that keeps everything reliable behind the
+              scenes: authentication, route structure, business logic, database interaction, and the
+              small architectural decisions that make scaling easier later.
+            </p>
+            <p>
+              I still enjoy the frontend layer because it helps me ship complete workflows instead of
+              isolated APIs. That combination lets me contribute across the stack while staying
+              strongest on the backend.
+            </p>
+          </article>
 
-          <div class="edu-timeline">
-            <div class="edu-item">
-              <span class="edu-year">2027</span>
-              <div class="edu-info">
-                <strong>B.Tech — Computer Engineering</strong>
-                <span>G.H. Raisoni College, Pune</span>
+          <div class="about-stack">
+            <article class="card reveal">
+              <h3>Education</h3>
+              <p class="fact-title">B.Tech in Computer Engineering</p>
+              <p>G.H. Raisoni College of Engineering and Management, Pune</p>
+              <p>Jul 2023 - Jun 2027</p>
+            </article>
+
+            <article class="card reveal">
+              <h3>Momentum</h3>
+              <ul class="compact-list">
+                <li>500+ DSA problems solved across coding platforms.</li>
+                <li>Full Stack Development and AI/ML certification from Apna College.</li>
+                <li>Competitive athletics background that built discipline and consistency.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Skills</p>
+          <h2>Tools I use to build product-ready systems.</h2>
+          <p class="section-intro">
+            I position myself as a full stack developer, but my strongest confidence is on the
+            backend: Node.js services, data handling, and architecture that supports long-term growth.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="card skill-card reveal">
+            <h3>Frontend</h3>
+            <p>Interfaces that stay fast, responsive, and easy to extend.</p>
+            <div class="chip-list">
+              <span class="chip">React</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+            </div>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3>Backend</h3>
+            <p>API design, auth, database workflows, and scalable service structure.</p>
+            <div class="chip-list">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Redis</span>
+              <span class="chip">BullMQ</span>
+              <span class="chip">JWT</span>
+              <span class="chip">REST APIs</span>
+            </div>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3>Tools</h3>
+            <p>Developer workflow, debugging, testing, and shipping support.</p>
+            <div class="chip-list">
+              <span class="chip">Docker</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Postman</span>
+            </div>
+          </article>
+        </div>
+
+        <article class="card skills-note reveal">
+          <div>
+            <p class="note-title">Problem solving stays part of the stack.</p>
+            <p>
+              Solving 500+ DSA questions has made me better at modeling constraints, thinking about
+              tradeoffs, and writing cleaner logic under pressure.
+            </p>
+          </div>
+          <a href="https://leetcode.com/u/Reetik_Singh/" target="_blank" rel="noreferrer" class="text-link">
+            View LeetCode
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Projects</p>
+          <h2>Selected work presented as engineering case studies.</h2>
+          <p class="section-intro">
+            These projects are written to show how I think about backend systems, APIs, data models,
+            and product delivery, not just how I style a card.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="card project-case reveal">
+            <div class="project-header">
+              <div>
+                <div class="project-meta-line">
+                  <p class="project-label">Full Stack Productivity System</p>
+                  <span class="meta-chip">Latest commit: April 19, 2026</span>
+                </div>
+                <h3>FocusLoop</h3>
+                <p class="project-impact">
+                  Built a MERN productivity system that turns planning, deep-work sessions, and
+                  reflection into one structured workflow with secure auth and analytics-ready backend state.
+                </p>
+              </div>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Reetiksingh/FocusLoop"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-tertiary"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://github.com/Reetiksingh/FocusLoop/blob/main/docs/mern-architecture.md"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-tertiary"
+                >
+                  Architecture
+                </a>
               </div>
             </div>
-            <div class="edu-item">
-              <span class="edu-year">2023</span>
-              <div class="edu-info">
-                <strong>HSC</strong>
-                <span>SNBP School and Junior College, Pune</span>
+
+            <div class="stack-row">
+              <span class="stack-pill">React</span>
+              <span class="stack-pill">Vite</span>
+              <span class="stack-pill">Zustand</span>
+              <span class="stack-pill">Node.js</span>
+              <span class="stack-pill">Express</span>
+              <span class="stack-pill">MongoDB</span>
+              <span class="stack-pill">JWT</span>
+              <span class="stack-pill">bcrypt</span>
+            </div>
+
+            <div class="project-grid">
+              <div>
+                <h4>Key features</h4>
+                <ul class="detail-list">
+                  <li>Plan / focus / reflect workflow inside one product loop.</li>
+                  <li>Task management, active focus sessions, journaling, streak tracking, and weekly reporting.</li>
+                  <li>Summary and heatmap endpoints that turn daily activity into product feedback.</li>
+                  <li>Reusable React frontend powered by Vite, Axios, and Zustand-based state stores.</li>
+                  <li>Protected user flows with persistent login and refresh-backed session continuity.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Engineering highlights</h4>
+                <ul class="detail-list">
+                  <li>JWT access tokens plus refresh-token rotation with hashed refresh-token storage.</li>
+                  <li>Modular Express routes for auth, tasks, sessions, journal, and stats endpoints.</li>
+                  <li>MongoDB models for users, tasks, focus sessions, journals, and daily activity snapshots.</li>
+                  <li>Rate limiting, Helmet, cookie-based auth refresh, and transaction-aware update fallbacks.</li>
+                </ul>
               </div>
             </div>
-            <div class="edu-item">
-              <span class="edu-year">2021</span>
-              <div class="edu-info">
-                <strong>SSC</strong>
-                <span>Rodgers English School, Pune</span>
+
+            <div class="project-footer">
+              <div>
+                <span class="footer-label">Challenge</span>
+                <p>
+                  Keeping task state, focus-session state, and daily analytics consistent required
+                  careful orchestration. The backend uses transaction-aware logic with a safe fallback
+                  for MongoDB environments that do not support full transactions.
+                </p>
               </div>
+              <p class="project-note">The public repo is current through the April 19, 2026 README refresh, but no live deployment link is exposed yet.</p>
+            </div>
+          </article>
+
+          <article class="card project-case reveal">
+            <div class="project-header">
+              <div>
+                <div class="project-meta-line">
+                  <p class="project-label">Backend Health-Tech Workflow</p>
+                  <span class="meta-chip">Latest commit: April 24, 2026</span>
+                </div>
+                <h3>Diet-Scanner</h3>
+                <p class="project-impact">
+                  Evolved the original diet scanner into a nutrition-intelligence backend that combines
+                  barcode flows, OCR label scanning, rule-based risk decisions, caching, and async processing.
+                </p>
+              </div>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Reetiksingh/Diet-Scanner"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-tertiary"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://diet-scanner.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-tertiary"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-row">
+              <span class="stack-pill">Node.js</span>
+              <span class="stack-pill">Express</span>
+              <span class="stack-pill">MySQL</span>
+              <span class="stack-pill">Redis</span>
+              <span class="stack-pill">BullMQ</span>
+              <span class="stack-pill">Tesseract.js</span>
+              <span class="stack-pill">Multer</span>
+              <span class="stack-pill">JWT</span>
+              <span class="stack-pill">QRCode</span>
+            </div>
+
+            <div class="project-grid">
+              <div>
+                <h4>Key features</h4>
+                <ul class="detail-list">
+                  <li>Barcode-based food lookup with disease-specific verdicts and recommendations.</li>
+                  <li>OCR nutrition-label scanning through `POST /api/scan-label` with result polling support.</li>
+                  <li>Nutrition parsing and rule-based decisioning for diabetes, hypertension, and general cases.</li>
+                  <li>Admin workflows for food records, nutrition data, QR assets, and operational stats.</li>
+                  <li>Structured responses with job status, decision output, cache state, and processing metrics.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Engineering highlights</h4>
+                <ul class="detail-list">
+                  <li>JWT-secured authentication with protected routes and role-aware admin access.</li>
+                  <li>Redis-backed caching with an in-memory fallback when Redis is unavailable.</li>
+                  <li>BullMQ-powered label-scan queue with an in-memory async fallback for resilience.</li>
+                  <li>Normalized MySQL schema across users, foods, nutrition, disease rules, scan history, and scan results.</li>
+                  <li>REST endpoints for auth, food retrieval, recommendations, admin dashboards, and OCR scan pipelines.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div>
+                <span class="footer-label">Challenge</span>
+                <p>
+                  The challenge was expanding a synchronous barcode app into a mixed sync/async system
+                  without breaking usability. OCR, caching, and job orchestration needed to stay fast
+                  for users while still degrading safely when Redis or BullMQ are not configured.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-case reveal">
+            <div class="project-header">
+              <div>
+                <div class="project-meta-line">
+                  <p class="project-label">Backend Commerce System</p>
+                  <span class="meta-chip">Latest commit: April 24, 2026</span>
+                </div>
+                <h3>Lumo Candles Backend</h3>
+                <p class="project-impact">
+                  Built a production-style e-commerce backend focused on backend maturity: auth,
+                  caching, idempotent order creation, queue-based processing, and concurrency-safe inventory handling.
+                </p>
+              </div>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Reetiksingh/Lumo-Luxury-E-Commerce-Landing-Experience-Frontend-System-"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-tertiary"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://github.com/Reetiksingh/Lumo-Luxury-E-Commerce-Landing-Experience-Frontend-System-/blob/main/SYSTEM_DESIGN.md"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-tertiary"
+                >
+                  System Design
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-row">
+              <span class="stack-pill">Node.js</span>
+              <span class="stack-pill">Express</span>
+              <span class="stack-pill">MongoDB</span>
+              <span class="stack-pill">Redis</span>
+              <span class="stack-pill">BullMQ</span>
+              <span class="stack-pill">Docker</span>
+              <span class="stack-pill">JWT</span>
+              <span class="stack-pill">Zod</span>
+            </div>
+
+            <div class="project-grid">
+              <div>
+                <h4>Key features</h4>
+                <ul class="detail-list">
+                  <li>User registration/login, admin product management, cart flows, and order placement.</li>
+                  <li>Product listing, filtering, search, pagination, and durable order snapshots.</li>
+                  <li>Dedicated worker processes for order processing, email tasks, and event logging.</li>
+                  <li>Docker-based local infrastructure for API, worker, MongoDB, replica-set init, and Redis.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Engineering highlights</h4>
+                <ul class="detail-list">
+                  <li>Controllers, services, and repositories separated to keep HTTP and business logic clean.</li>
+                  <li>Redis caching for hot product reads plus short-lived distributed locks during order creation.</li>
+                  <li>BullMQ queues for order processing, email work, and background event logging.</li>
+                  <li>MongoDB transactions, conditional stock decrements, and idempotency keys to prevent overselling or duplicate orders.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div>
+                <span class="footer-label">Challenge</span>
+                <p>
+                  The difficult part is correctness under load: product reads should stay fast, but
+                  checkout can never trust cache alone. The system solves that by combining Redis for
+                  speed with transaction-backed stock protection and idempotent order handling.
+                </p>
+              </div>
+              <p class="project-note">This repo does not expose a live deployment, so I linked the system design doc that explains the scaling and consistency decisions.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="engineering">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Engineering Highlights</p>
+          <h2>Backend patterns I prioritize when building Node.js products.</h2>
+          <p class="section-intro">
+            This section is here to make the backend signal explicit. It reflects the kind of
+            systems I implement today and the production-oriented patterns I want to keep applying in
+            full stack roles.
+          </p>
+        </div>
+
+        <div class="highlight-grid">
+          <article class="card highlight-card reveal">
+            <p class="highlight-tag">Security</p>
+            <h3>JWT auth with refresh tokens</h3>
+            <p>
+              I implement short-lived access tokens with refresh-token rotation, secure cookie storage,
+              and revocation-friendly session handling, as shown in FocusLoop and the auth systems I build.
+            </p>
+            <p class="highlight-why">
+              Why it matters: it improves session security without making users log in constantly.
+            </p>
+          </article>
+
+          <article class="card highlight-card reveal">
+            <p class="highlight-tag">Architecture</p>
+            <h3>REST API structure that scales cleanly</h3>
+            <p>
+              I separate routes, controllers, middleware, validation, and data models so features can
+              grow without turning the backend into one large file.
+            </p>
+            <p class="highlight-why">
+              Why it matters: it keeps services easier to test, extend, and hand off.
+            </p>
+          </article>
+
+          <article class="card highlight-card reveal">
+            <p class="highlight-tag">Performance</p>
+            <h3>Redis caching for read-heavy paths</h3>
+            <p>
+              I use Redis for cache-aside patterns on hot reads, then protect correctness-critical
+              flows by keeping the database as the source of truth. Diet-Scanner and Lumo both now reflect that thinking.
+            </p>
+            <p class="highlight-why">
+              Why it matters: it reduces database load and improves response times as traffic grows.
+            </p>
+          </article>
+
+          <article class="card highlight-card reveal">
+            <p class="highlight-tag">Scalability</p>
+            <h3>BullMQ for background jobs</h3>
+            <p>
+              I use queue-based workflows for label scanning, order processing, emails, and other work
+              that should not block the request-response cycle.
+            </p>
+            <p class="highlight-why">
+              Why it matters: it keeps APIs responsive while adding retryable, production-safe async work.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-shell">
+        <div class="contact-wrap card reveal">
+          <div class="contact-copy">
+            <p class="section-kicker">Contact</p>
+            <h2>Looking for a full stack developer with real backend interest?</h2>
+            <p>
+              I am open to backend-focused full stack roles, internships, and opportunities where I
+              can keep growing in Node.js, systems design, and product engineering.
+            </p>
+            <div class="contact-actions">
+              <a href="mailto:reetiksingh8767@gmail.com" class="btn btn-primary">Email Me</a>
+              <a href="Resume.pdf" download class="btn btn-secondary">Download Resume</a>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <a href="mailto:reetiksingh8767@gmail.com" class="contact-card">
+              <span class="contact-label">Email Me</span>
+             
+            </a>
+            <a
+              href="https://www.linkedin.com/in/reetik-singh-7b0200288/"
+              target="_blank"
+              rel="noreferrer"
+              class="contact-card"
+            >
+              <span class="contact-label">LinkedIn Profile</span>
+              
+            </a>
+            <a
+              href="https://github.com/Reetiksingh"
+              target="_blank"
+              rel="noreferrer"
+              class="contact-card"
+            >
+              <span class="contact-label">GitHub Projects</span>
+              
+            </a>
+            <a
+              href="https://leetcode.com/u/Reetik_Singh/"
+              target="_blank"
+              rel="noreferrer"
+              class="contact-card"
+            >
+              <span class="contact-label">500+ problems solved</span>
+              
+            </a>
+            <div class="contact-card contact-card-static">
+              <span class="contact-label">Message me on WhatsApp</span>
+              
             </div>
           </div>
         </div>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
-  <!-- ───── CONTACT ───── -->
-  <section id="contact" class="section reveal">
-    <div class="section-inner">
-
-      <div class="section-header">
-        <span class="section-tag">05 — Connect</span>
-        <h2 class="section-title">Let's Build Together</h2>
-      </div>
-
-      <div class="contact-layout">
-        <p class="contact-lead reveal-child">
-          Open to backend, full-stack, and internship opportunities. If you're building something great — let's talk.
-        </p>
-
-        <div class="contact-links reveal-child">
-          <a href="mailto:reetiksingh8767@gmail.com" class="contact-card">
-            <span class="cc-icon">✉️</span>
-            <div>
-              <strong>Email</strong>
-              <span>reetiksingh8767@gmail.com</span>
-            </div>
-            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-          <a href="https://www.linkedin.com/in/reetik-singh-7b0200288/" target="_blank" class="contact-card">
-            <span class="cc-icon">💼</span>
-            <div>
-              <strong>LinkedIn</strong>
-              <span>Reetik Singh</span>
-            </div>
-            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-          <a href="https://github.com/Reetiksingh" target="_blank" class="contact-card">
-            <span class="cc-icon">🐙</span>
-            <div>
-              <strong>GitHub</strong>
-              <span>Reetik Singh</span>
-            </div>
-            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-          <a href="https://leetcode.com/u/Reetik_Singh/" target="_blank" class="contact-card">
-            <span class="cc-icon">⚔️</span>
-            <div>
-              <strong>LeetCode</strong>
-              <span>500+ problems solved</span>
-            </div>
-            <svg class="cc-arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-
-        <div class="contact-phone reveal-child">
-          <span>📞</span> (+91) 8767573253
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <span>Reetik Singh © 2025</span>
-      <span>Built with precision · Pune, India 🇮🇳</span>
+    <div class="section-shell footer-shell">
+      <span>Reetik Singh</span>
+      <span>Backend-focused full stack developer</span>
+      <span id="year"></span>
     </div>
   </footer>
 
