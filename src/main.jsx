@@ -173,10 +173,16 @@ function Header() {
             </a>
           ))}
         </div>
-        <a href="/Resume.pdf" download className="icon-button" aria-label="Download resume">
-          <FileDown size={16} />
-          <span className="hidden sm:inline">Resume</span>
-        </a>
+        <a
+  href="https://drive.google.com/file/d/1ZFHlsJK5XZmWTmI8U5UtxBWZCxF0oELq/view?usp=sharing"
+  target="_blank"
+  rel="noreferrer"
+  className="icon-button"
+  aria-label="View resume"
+>
+  <FileDown size={16} />
+  <span className="hidden sm:inline">Resume</span>
+</a>
       </nav>
     </header>
   );
